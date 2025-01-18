@@ -48,7 +48,9 @@ compinit
 
 # Created by `pipx` on 2024-12-28 11:25:45
 export PATH="$PATH:/home/arjith/.local/bin"
-alias tmux="~/.config/tmux/base.sh"
+export PATH=$PATH:/usr/local/go/bin
+
+#alias tmux="~/.config/tmux/base.sh"
 
 
 export NVM_DIR="$HOME/.nvm"
