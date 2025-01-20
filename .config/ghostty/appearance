@@ -1,0 +1,9 @@
+theme = rose-pine
+
+selection-background = #9ccfd8
+selection-foreground = #31748f
+
+background-opacity = 0.6
+
+window-width = 192
+window-height = 192
