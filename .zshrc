@@ -63,3 +63,13 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias tmuxw="~/.config/tmux/work_setup.sh"
+
+
+[[ -s "/home/arjith/.gvm/scripts/gvm" ]] && source "/home/arjith/.gvm/scripts/gvm"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+
+
