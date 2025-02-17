@@ -1,0 +1,9 @@
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+set -g @plugin 'rose-pine/tmux'
+set -g @plugin 'MunifTanjim/tmux-mode-indicator'
+
+set -g @plugin 'sainnhe/tmux-fzf'
+set -g @plugin 'omerxx/tmux-sessionx'
+
+set -g @plugin 'tmux-plugins/tpm'
