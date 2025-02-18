@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Lines configured by zsh-newuser-install
@@ -9,8 +11,8 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/arjith/.zshrc'
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines added by compinstall
 #
 alias vim="nvim"
@@ -33,49 +35,47 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-#loading completions
-autoload -Uz compinit && compinit
 bindkey "^f" autosuggest-accept
-# source ~/.config/zsh/oh_my_zsh/.zshrc
-# source ~/.config/zsh/starship_/.zshrc
-#
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/omp/config.yaml)"
 . "/home/arjith/.deno/env"
 FPATH="$HOME/.docker/completions:$FPATH"
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 
 # Created by `pipx` on 2024-12-28 11:25:45
-export PATH="$PATH:/home/arjith/.local/bin"
-export PATH=$PATH:/usr/local/go/bin
-
-#alias tmux="~/.config/tmux/base.sh"
-
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
 
 # bun completions
-[ -s "/home/arjith/.bun/_bun" ] && source "/home/arjith/.bun/_bun"
+bun(){
+    [ -s "/home/arjith/.bun/_bun" ] && source "/home/arjith/.bun/_bun"
+}
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="$PATH:/home/arjith/.local/bin:/usr/local/go/bin:$BUN_INSTALL/bin"
 
 alias tmuxw="~/.config/tmux/work_setup.sh"
 
-
-[[ -s "/home/arjith/.gvm/scripts/gvm" ]] && source "/home/arjith/.gvm/scripts/gvm"
+gvm(){
+    [[ -s "/home/arjith/.gvm/scripts/gvm" ]] && source "/home/arjith/.gvm/scripts/gvm"
+}
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
 
-
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk(){
+    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+}
+
+#zprof
