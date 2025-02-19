@@ -1,0 +1,5 @@
+set -g @cpu_low_icon " "
+set -g @cpu_medium_icon " "
+set -g @cpu_high_icon " "
+
+set -g status-right '#{cpu_fg_color}#{cpu_icon}#{cpu_percentage} #{ram_fg_color}#{ram_icon} #{ram_percentage}#[default] | %a %H:%M '
