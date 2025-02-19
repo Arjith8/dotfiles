@@ -79,3 +79,14 @@ sdk(){
 }
 
 #zprof
+
+# fnm
+FNM_PATH="/home/arjith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/arjith/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# TODO need to figure out completions later
+#eval "$(fnm env --use-on-cd --shell zsh)"
+#fnm completions --shell=zsh > ~/.antigen/bundles/zsh-users/zsh-completions/src/_fnm
