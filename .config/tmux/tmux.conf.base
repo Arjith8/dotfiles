@@ -14,3 +14,5 @@ set -g default-terminal "tmux-256color"
 # Used to make nvim image plugin work
 set -gq allow-passthrough on
 set -g visual-activity off
+
+bind-key N new-session
