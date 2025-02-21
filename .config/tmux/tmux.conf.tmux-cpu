@@ -2,8 +2,8 @@ set -g @cpu_low_icon " "
 set -g @cpu_medium_icon " "
 set -g @cpu_high_icon " "
 
-#set -g @cpu_low_fg_color "" # foreground color when cpu is low
-#set -g @cpu_medium_fg_color "" # foreground color when cpu is medium
-#set -g @cpu_high_fg_color "" # foreground color when cpu is high
+set -g @cpu_low_fg_color "" # foreground color when cpu is low
+set -g @cpu_medium_fg_color "" # foreground color when cpu is medium
+set -g @cpu_high_fg_color "" # foreground color when cpu is high
 
 set -g status-right '#{cpu_fg_color} #{cpu_icon}#{cpu_percentage} #{ram_fg_color}#{ram_icon} #{ram_percentage}#[default] | %a %H:%M '
