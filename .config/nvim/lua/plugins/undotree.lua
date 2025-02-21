@@ -1,7 +1,7 @@
 return {
     "mbbill/undotree",
-    config = function()
-        vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
-    end
+    keys = {
+        { "<leader>ut", "<cmd>UndotreeToggle<cr> <C-w>w", desc = "Opens UndoTree panel and switched to it" }
+    },
 }
 
