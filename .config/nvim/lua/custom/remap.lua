@@ -9,3 +9,10 @@ vim .keymap.set("n", "<C-n>", "<C-w>w")
 vim.keymap.set("n", "<C-H>", "<cmd>vertical resize +5<CR>")
 vim.keymap.set("n", "<C-K>", "<cmd>resize +5<CR>")
 vim.keymap.set("n", "<C-J>", "<cmd>resize -5<CR>")
+
+vim.keymap.set("n", "<leader>ts", function ()
+    local a = tonumber(vim.fn.input("Tap Space:"))
+    vim.opt.tabstop = a
+    vim.opt.softtabstop = a
+    vim.opt.shiftwidth = a
+end)
