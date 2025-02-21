@@ -90,3 +90,6 @@ fi
 # TODO need to figure out completions later
 #eval "$(fnm env --use-on-cd --shell zsh)"
 #fnm completions --shell=zsh > ~/.antigen/bundles/zsh-users/zsh-completions/src/_fnm
+#
+alias ga="git add"
+alias gits="git status"
