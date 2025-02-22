@@ -2,18 +2,14 @@ return {
     'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' , 'nvim-telescope/telescope-live-grep-args.nvim'},
     opt = {},
+    keys = {
+        { '<leader>ff', "<cmd>Telescope find_files <cr>", desc = "Telescope Find Files" },
+        { '<leader>gf', "<cmd>Telescope git_files <cr>", desc = "Telescope Git Find Files" },
+        { '<leader>ps', "<cmd>Telescope grep_string <cr>", desc = "Telescope Grep String" },
+        { '<leader>fg', "<cmd> Telescope live_grep_args <cr>", desc = "Telescope Live Grep Args" },
+    },
     config = function()
        local telescope = require('telescope')
-
-       local builtin = require("telescope.builtin")
-       vim.keymap.set("n", "<leader>ff", function ()
-           builtin.find_files({ hidden = true })
-       end)
-       vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
-       vim.keymap.set("n", "<leader>ps", builtin.grep_string)
-       vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-       --vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
-       --vim.keymap.set("n", "<leader>qf", builtin.quick_fix, {})
        telescope.load_extension("live_grep_args")
    end
 }
