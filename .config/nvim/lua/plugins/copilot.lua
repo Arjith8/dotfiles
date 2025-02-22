@@ -1,15 +1,25 @@
 return {
-    "github/copilot.vim",
-    lazy = false,
-    keys = {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    event = "BufReadPost",
+    opts = {
+        panel = {
+            enable = true,
+            auto_refresh = true,
+        },
+        suggestion = {
+            enable = true,
+            auto_trigger = true,
+            hide_during_completions = false,
+            keymap = {
+                accept_line = "<Tab>",
+                accept_word = "<C-w>"
+            }
+        }
     },
-    setup = function()
-       -- vim.keymp.set("i", "<C-Tab>", 'copilot#Accept("\\<CR>")', {
-       --     expr = true,
-       --     replace_keycodes = false,
-       -- })
-       -- vim.g.copilot_no_tab_map = true
-       -- vim.g.copilot_no_auto_complete = true
-    end,
-
+    keys = {
+        { "<Tab>", "<cmd>Copilot suggestion accept_line", mode = 'i', desc = "Accept Line Suggested by Copilot" },
+        { "<C-w>", "<cmd>Copilot suggestion accept_word", mode = 'i', desc = "Accept Word Suggested by Copilot" },
+    }
 }
