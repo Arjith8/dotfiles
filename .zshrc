@@ -93,3 +93,7 @@ fi
 #
 alias ga="git add"
 alias gits="git status"
+
+function mkcd(){
+    mkdir -p "$1" && cd "$1"
+}
