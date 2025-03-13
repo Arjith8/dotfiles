@@ -9,3 +9,5 @@ window-width = 192
 window-height = 192
 
 cursor-color = #3e8fb0
+
+fullscreen=true
