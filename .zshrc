@@ -1,5 +1,7 @@
 #zmodload zsh/zprof
 
+echo
+
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Lines configured by zsh-newuser-install
