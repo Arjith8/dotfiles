@@ -2,3 +2,5 @@ window-save-state = always
 
 copy-on-select = true
 clipboard-paste-protection = true
+
+mouse-hide-while-typing = true
