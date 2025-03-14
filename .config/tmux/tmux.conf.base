@@ -17,3 +17,6 @@ set -g visual-activity off
 
 bind N new-session
 bind Escape detach
+
+unbind x
+bind x command-prompt -p "Kill window? (Y/n)" "if -F '#{==:%%,n}' 'display-message Cancelled' 'kill-window'"
