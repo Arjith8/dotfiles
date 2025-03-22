@@ -15,8 +15,13 @@ set -g default-terminal "tmux-256color"
 set -gq allow-passthrough on
 set -g visual-activity off
 
-bind N new-session
-bind Escape detach
+bind d detach
 
 unbind x
 bind x command-prompt -p "Kill window? (Y/n)" "if -F '#{==:%%,n}' 'display-message Cancelled' 'kill-window'"
+
+bind M-a popup -E "~/dotfiles/.config/tmux/new-window.sh"
+
+bind N new-session
+
+set-hook -g session-created 'command-prompt -p "Session name:" "new-session -s %%"; new-window -n nu "nu"; new-window -n fish "fish"; select-window -t 1'
