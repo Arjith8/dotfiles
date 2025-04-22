@@ -4,6 +4,11 @@ return {
     build = ":Copilot auth",
     event = "BufReadPost",
     opts = {
+        logger = {
+            file_log_level = vim.log.levels.TRACE,
+            log_to_file = true,
+            trace_lsp = "verbose",
+        },
         panel = {
             enable = true,
             auto_refresh = true,
