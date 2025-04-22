@@ -99,3 +99,6 @@ alias gits="git status"
 function mkcd(){
     mkdir -p "$1" && cd "$1"
 }
+
+VIRTUAL_ENV_DISABLE_PROMPT=1
+

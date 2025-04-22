@@ -22,6 +22,14 @@ blocks:
         cache_duration: none
         style: full
 
+    - type: python
+      style: powerline
+      powerline_symbol: 
+      foreground: "#100e23"
+      background: "#906cff"
+      template: "  {{ .Full }} "
+
+
     - type: git
       style: powerline
       foreground: p:rose-moon
