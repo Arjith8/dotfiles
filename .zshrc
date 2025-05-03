@@ -56,9 +56,7 @@ nvm() {
 
 
 # bun completions
-bun(){
-    [ -s "/home/arjith/.bun/_bun" ] && source "/home/arjith/.bun/_bun"
-}
+[ -s "/home/arjith/.bun/_bun" ] && source "/home/arjith/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -101,4 +99,5 @@ function mkcd(){
 }
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
+export PKG_CONFIG_PATH="/usr/local/lib64/pkgconfig:$PKG_CONFIG_PATH"
 
