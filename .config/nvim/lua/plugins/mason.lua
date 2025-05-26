@@ -1,10 +1,10 @@
 return {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     dependencies = {
         "stevearc/dressing.nvim",
     },
     opts = {},
     keys = {
-        { '<leader>mp', "<cmd>Mason<cr>", desc = "Mason" },
+        { '<leader>ma', "<cmd>Mason<cr>", desc = "Mason" },
     },
 }

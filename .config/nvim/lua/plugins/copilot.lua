@@ -21,7 +21,7 @@ return {
                 accept = false,
             }
         },
-        vim.keymap.set("i", '<Tab>', function()
+        vim.keymap.set("i", '<M-Tab>', function()
             if require("copilot.suggestion").is_visible() then
                 require("copilot.suggestion").accept_line()
             else
@@ -34,6 +34,7 @@ return {
     },
     keys = {
         { "<C-w>", "<cmd>Copilot suggestion accept_word <cr>", mode = 'i', desc = "Accept Word Suggested by Copilot" },
+        { "<leader>cd", "<cmd>Copilot disable <cr>", desc = "Disable Copilot" }
     },
 }
 
