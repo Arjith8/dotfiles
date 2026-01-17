@@ -1,0 +1,10 @@
+[Unit]
+Description=Test user service that sends a notification
+
+[Service]
+Type=oneshot
+ExecStart=notify-send "Test" "This might already work"
+
+[Install]
+WantedBy=default.target
+

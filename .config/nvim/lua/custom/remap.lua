@@ -11,6 +11,7 @@ vim.keymap.set("n", "<C-K>", "<cmd>resize +5<CR>")
 vim.keymap.set("n", "<C-J>", "<cmd>resize -5<CR>")
 vim.keymap.set("i", "jh", "<Esc>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
+vim.keymap.set({"n", "v", "i"}, "<C-f>", "<cmd> lua vim.lsp.buf.format()<CR>")
 
 
 vim.keymap.set("n", "<leader>ts", function ()
@@ -19,3 +20,16 @@ vim.keymap.set("n", "<leader>ts", function ()
     vim.opt.softtabstop = a
     vim.opt.shiftwidth = a
 end)
+
+vim.keymap.set({"n", "v"}, ",m", "]m", { remap = true })
+vim.keymap.set({"n", "v"}, ",,m", "[m", { remap = true })
+
+
+--vim.keymap.set("n", ",m", function()
+--  require("nvim-treesitter.textobjects.move").goto_next_start("@function.outer")
+--end)
+--
+--vim.keymap.set("n", ",,m", function()
+--  require("nvim-treesitter.textobjects.move").goto_previous_start("@function.outer")
+--end)
+--

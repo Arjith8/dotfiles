@@ -9,5 +9,5 @@ return {
         { "<leader>rm", "<cmd>RenderMarkdown<cr>", desc = "Render Markdown" },
         { "<leader>rmt", "<cmd>RenderMarkdown toggle<cr>", desc = "Render Markdown Toggle" },
         { "<leader>rmd", "<cmd>RenderMarkdown debug<cr>", desc = "Render Markdown Debug" },
-    }
+    },
 }

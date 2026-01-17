@@ -101,3 +101,4 @@ function mkcd(){
 VIRTUAL_ENV_DISABLE_PROMPT=1
 export PKG_CONFIG_PATH="/usr/local/lib64/pkgconfig:$PKG_CONFIG_PATH"
 
+export PATH=$PATH:$HOME/go/bin
