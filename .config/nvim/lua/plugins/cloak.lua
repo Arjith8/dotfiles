@@ -7,7 +7,7 @@ return {
     highlight_group = "Comment",
     patterns = {
       {
-        file_pattern = { ".env*", "wrangler.toml", ".dev.vars" },
+        file_pattern = { ".env", "wrangler.toml", ".dev.vars" },
         cloak_pattern = "=.+",
       },
     },
