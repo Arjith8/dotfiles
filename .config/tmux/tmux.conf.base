@@ -25,3 +25,6 @@ bind M-a popup -E "~/dotfiles/.config/tmux/new-window.sh"
 bind N new-session
 
 set-hook -g session-created 'command-prompt -p "Session name:" "new-session -s %%"; new-window -n nu "nu"; new-window -n fish "fish"; select-window -t 1'
+
+set -s extended-keys on
+set -as terminal-features 'xterm*:extkeys'
