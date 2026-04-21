@@ -20,3 +20,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = '120'
 
 vim.g.python3_host_prog = '/home/linuxbrew/.linuxbrew/bin/python3'
+
+vim.g.neovim_tui_enable_csi_u = false
