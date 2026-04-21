@@ -12,7 +12,7 @@ set -g status-position top
 set -g default-terminal "tmux-256color"
 
 # Used to make nvim image plugin work
-set -gq allow-passthrough on
+set -gq allow-passthrough off
 set -g visual-activity off
 
 bind d detach
@@ -26,5 +26,6 @@ bind N new-session
 
 set-hook -g session-created 'command-prompt -p "Session name:" "new-session -s %%"; new-window -n nu "nu"; new-window -n fish "fish"; select-window -t 1'
 
-set -s extended-keys on
-set -as terminal-features 'xterm*:extkeys'
+set -s extended-keys off
+set -g xterm-keys on
+set -as terminal-features 'ghostty*:extkeys'
