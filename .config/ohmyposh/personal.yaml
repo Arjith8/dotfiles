@@ -18,7 +18,7 @@ blocks:
     style: powerline
     powerline_symbol: 
     template: " \uea83 {{ path .Path .Location }} "
-    properties:
+    options:
       style: folder
     background: p:orange
     foreground: p:white
@@ -35,8 +35,7 @@ blocks:
     - "{{ if gt .Ahead 0 }}#49416D{{ end }}"
     - "{{ if gt .Behind 0 }}#7A306C{{ end }}"
     template: " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} "
-    properties:
-      branch_max_length: 25
+    options:
       fetch_status: true
       fetch_upstream_icon: true
     background: p:green
@@ -54,7 +53,7 @@ blocks:
     leading_diamond: <transparent,background></>
     trailing_diamond: 
     template: " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} "
-    properties:
+    options:
       always_enabled: true
     background: p:blue
     foreground: p:white
@@ -65,7 +64,7 @@ blocks:
 #  - type: node
 #    style: plain
 #    template: "\ue718 "
-#    properties:
+#    options:
 #      display_mode: files
 #      fetch_package_manager: false
 #      home_enabled: false
@@ -74,14 +73,14 @@ blocks:
 #  - type: go
 #    style: plain
 #    template: "\ue626 "
-#    properties:
+#    options:
 #      fetch_version: false
 #    background: transparent
 #    foreground: p:blue
 #  - type: python
 #    style: plain
 #    template: "\ue235 "
-#    properties:
+#    options:
 #      display_mode: files
 #      fetch_version: false
 #      fetch_virtual_env: false
@@ -105,7 +104,7 @@ tooltips:
   leading_diamond: 
   trailing_diamond: 
   template: " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
-  properties:
+  options:
     display_default: true
   background: p:orange
   foreground: p:white
@@ -116,8 +115,6 @@ tooltips:
   leading_diamond: 
   trailing_diamond: 
   template: " \uebd8 {{ .Name }} "
-  properties:
-    display_default: true
   background: p:blue
   foreground: p:white
 transient_prompt:
