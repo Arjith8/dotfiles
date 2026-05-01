@@ -102,3 +102,38 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 export PKG_CONFIG_PATH="/usr/local/lib64/pkgconfig:$PKG_CONFIG_PATH"
 
 export PATH=$PATH:$HOME/go/bin
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/arjith/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+source ~/.azure-completion.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Turso
+export PATH="$PATH:/home/arjith/.turso"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+export PATH="/opt/kiro/Kiro/bin:$PATH"
+
+# opencode
+export PATH=/home/arjith/.opencode/bin:$PATH
+
+alias claude='claude --debug-file ~/.claude/debug/session.log'
+alias claude-work="echo 'you are connecting to work claude\n';CLAUDE_CONFIG_DIR=~/.claude-work claude"
+
+# OpenClaw Completion
+source "/home/arjith/.openclaw/completions/openclaw.zsh"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/arjith/.pulumi/bin

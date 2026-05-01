@@ -1,9 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "permission": {
-      "*": "ask",
-      "read": "allow",
-      "glob": "allow",
-      "bash": "ask"
-  }
+    "*": "ask",
+    "read": "allow",
+    "glob": "allow",
+    "bash": "ask"
+  },
+  "plugin": ["@mohak34/opencode-notifier@latest"]
 }
