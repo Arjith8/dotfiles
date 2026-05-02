@@ -4,7 +4,21 @@
     "*": "ask",
     "read": "allow",
     "glob": "allow",
-    "bash": "ask"
+    "grep": "allow",
+    "bash": {
+      "*": "ask"
+    }
+  },
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "opencode-go/kimi-k2.6"
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "opencode-go/deepseek-v4-pro",
+      "reasoningEffort": "high"
+    }
   },
   "plugin": ["@mohak34/opencode-notifier@latest"]
 }
