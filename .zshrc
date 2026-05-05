@@ -137,3 +137,4 @@ source "/home/arjith/.openclaw/completions/openclaw.zsh"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/arjith/.pulumi/bin
+
