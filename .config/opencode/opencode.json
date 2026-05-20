@@ -6,19 +6,22 @@
     "glob": "allow",
     "grep": "allow",
     "bash": {
-      "*": "ask"
+      "*": "ask",
+      "grep *": "allow",
+      "head": "allow",
+      "tail": "allow"
     }
   },
   "agent": {
     "build": {
       "mode": "primary",
       "model": "opencode-go/deepseek-v4-pro",
-      "reasoningEffort": "medium"
+      "variant": "medium"
     },
     "plan": {
       "mode": "primary",
       "model": "opencode-go/deepseek-v4-pro",
-      "reasoningEffort": "high"
+      "variant": "high"
     }
   },
   "plugin": ["@mohak34/opencode-notifier@latest"]

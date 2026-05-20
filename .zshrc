@@ -137,4 +137,7 @@ source "/home/arjith/.openclaw/completions/openclaw.zsh"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/arjith/.pulumi/bin
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
 
+eval "$(zoxide init zsh)"
