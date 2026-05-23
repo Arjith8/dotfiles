@@ -132,9 +132,6 @@ export PATH=/home/arjith/.opencode/bin:$PATH
 alias claude='claude --debug-file ~/.claude/debug/session.log'
 alias claude-work="echo 'you are connecting to work claude\n';CLAUDE_CONFIG_DIR=~/.claude-work claude"
 
-# OpenClaw Completion
-source "/home/arjith/.openclaw/completions/openclaw.zsh"
-
 # add Pulumi to the PATH
 export PATH=$PATH:/home/arjith/.pulumi/bin
 fpath=(~/.zsh/completions $fpath)
