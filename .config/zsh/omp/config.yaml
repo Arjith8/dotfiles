@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 version: 3
 final_space: true
 
@@ -76,6 +76,3 @@ transient_prompt:
   ]
   template: '🢖 '
   foreground: p:iris-main
-
-
-
