@@ -55,16 +55,6 @@ nvm() {
 }
 
 
-# bun completions
-[ -s "/home/arjith/.bun/_bun" ] && source "/home/arjith/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-
-export PATH="$PATH:/home/arjith/.local/bin:/usr/local/go/bin:$BUN_INSTALL/bin"
-
-alias tmuxw="~/.config/tmux/work_setup.sh"
-
 gvm(){
     [[ -s "/home/arjith/.gvm/scripts/gvm" ]] && source "/home/arjith/.gvm/scripts/gvm"
 }
