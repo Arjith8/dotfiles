@@ -5,7 +5,7 @@ hl.monitor({
     scale    = "auto",
 })
 
-local terminal    = "kitty"
+local terminal    = "ghostty"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 
@@ -336,6 +336,6 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user restart xdg-desktop-portal")
-  hl.exec_cmd("systemctl --user restart xdg-desktop-portal-hyprland")
+  hl.exec_cmd("systemctl --user start xdg-desktop-portal-hyprland")
   hl.exec_cmd("/usr/libexec/hyprpolkitagent")
 end)
