@@ -130,3 +130,5 @@ fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
 eval "$(zoxide init zsh)"
+
+[ -f "/home/arjith/.ghcup/env" ] && . "/home/arjith/.ghcup/env" # ghcup-env
