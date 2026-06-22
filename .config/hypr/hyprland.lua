@@ -8,6 +8,7 @@ hl.monitor({
 local terminal    = "ghostty"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
+local browser     = "flatpak run app.zen_browser.zen"
 
 
 -------------------
@@ -234,7 +235,8 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(browser))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
@@ -334,11 +336,3 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
-
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland")
-  hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-  hl.exec_cmd("systemctl --user restart xdg-desktop-portal")
-  hl.exec_cmd("systemctl --user start xdg-desktop-portal-hyprland")
-  hl.exec_cmd("/usr/libexec/hyprpolkitagent")
-end)
