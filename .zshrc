@@ -1,8 +1,8 @@
 #zmodload zsh/zprof
 
-echo
-
 export XDG_CONFIG_HOME="$HOME/.config"
+
+export EDITOR=nvim
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
