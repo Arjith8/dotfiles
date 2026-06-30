@@ -15,12 +15,12 @@
   "agent": {
     "build": {
       "mode": "primary",
-      "model": "opencode-go/deepseek-v4-pro",
+      "model": "opencode/deepseek-v4-flash-free",
       "variant": "medium"
     },
     "plan": {
       "mode": "primary",
-      "model": "opencode-go/deepseek-v4-pro",
+      "model": "opencode/deepseek-v4-flash-free",
       "variant": "high"
     }
   },
