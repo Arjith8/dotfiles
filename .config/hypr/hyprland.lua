@@ -53,9 +53,8 @@ hl.env("DESKTOP_SESSION","Hyprland")
 hl.config({
     general = user_config.general,
     decoration = user_config.decorations,
-    animations = {
-        enabled = true,
-    },
+    binds = user_config.binds,
+    animations = { enabled = true },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -136,7 +135,6 @@ hl.config({
     },
 })
 
-
 ---------------
 ---- INPUT ----
 ---------------
@@ -190,7 +188,7 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
+    local key = tostring(i % 10) -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
