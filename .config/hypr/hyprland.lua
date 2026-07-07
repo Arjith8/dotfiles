@@ -1,9 +1,9 @@
-require("environment.env")
+require("environment")
 require("monitor")
-require("keybinds.keybinds")
+require("keybinds")
 local user_config = require("config")
 
-local variables = require("variables.variables")
+local variables = require("variables")
 local mainMod = variables.mainMod
 
 hl.on("hyprland.start", function ()
