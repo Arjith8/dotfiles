@@ -5,19 +5,13 @@ require("keybinds.keybinds")
 local variables = require("variables.variables")
 local mainMod = variables.mainMod
 
--------------------
----- AUTOSTART ----
--------------------
-
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemd-run --user --unit=graphical-session-starter --property=Requires=graphical-session.target --property=Type=oneshot --remain-after-exit /bin/true")
   hl.exec_cmd("systemctl --user start xdg-desktop-portal")
   hl.exec_cmd("systemctl --user start xdg-desktop-portal-gtk")
   hl.exec_cmd("systemctl --user start xdg-desktop-portal-hyprland")
   hl.exec_cmd("waybar")
+  hl.exec_cmd("~/.config/hypr/scripts/hyprpaper.sh")
 end)
 
 
