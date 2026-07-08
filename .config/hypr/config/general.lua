@@ -1,6 +1,9 @@
 return {
     gaps_in  = 2,
-    gaps_out = 0,
+    gaps_out = {
+        top = 5,
+        bottom = 15
+    },
     border_size = 1,
 
     col = {
